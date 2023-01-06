@@ -27,3 +27,5 @@ Returns: Real
 ## Notes
 
 Only use colours with equal red and blue values for the colour key. I'd recommend `c_lime` or a shade of grey. If you don't, some weird effects can happen, such as not being able to click through a transparent part of the window or being able to click through an opaque part of the window depending no the colours you use. 
+
+`window_set_always_on_top` may not work at the start of the game, so you may need to wait a few frames before you can successfully use it. 
