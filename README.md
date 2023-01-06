@@ -22,3 +22,8 @@ Returns: none
 ### window_get_error
 Parameters: none
 Returns: Real
+
+
+## Notes
+
+Only use colours with equal red and blue values for the colour key. I'd recommend `c_lime` or a shade of grey. If you don't, some weird effects can happen, such as not being able to click through a transparent part of the window or being able to click through an opaque part of the window depending no the colours you use. 
