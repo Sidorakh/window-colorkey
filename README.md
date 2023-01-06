@@ -21,6 +21,7 @@ Returns: none
 
 ### window_get_error
 Parameters: none
+
 Returns: Real
 
 
