@@ -7,10 +7,12 @@ C++ source is located in `./transparent-window` as a VS2019 project.
 | Parameter | Type | Description |
 | -- | -- |--|
 | color | Constant.Color | Colour to make transparent |
-| alpha | Real | Alpha value to make transparent (unused?) |
+| alpha | Real | Sets the alpha value for the entire client window |
 | mode | Enum | Transparency mode (enum: `WINDOW_TRANSPARENCY_MODE`) |
 
 Returns: none
+
+Note: The color paramter is only used when `WINDOW_TRANSPARENCY_MODE.COLOR_KEY` mode is used, and the alpha parameter is only used when `WINDOW_TRANSPARENCY_MODE.ALPHA` mode is used. A combination of the two can be used using `WINDOW_TRANSPARENCY_MODE.COLOR_KEY | WINDOW_TRANSPARENCY_MODE.ALPHA`
 
 ### window_set_always_on_top
 | Parameter | Type | Description |
