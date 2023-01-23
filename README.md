@@ -1,5 +1,5 @@
 # window-colorkey
-Window transparency pakckaged in a DLL (Windows only)
+Window transparency packaged in a DLL (Windows only)
 C++ source is located in `./transparent-window` as a VS2019 project. 
 
 ## Exposed functions:
