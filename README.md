@@ -12,7 +12,6 @@ C++ source is located in `./transparent-window` as a VS2019 project.
 
 Returns: none
 
-
 ### window_set_always_on_top
 | Parameter | Type | Description |
 | -- | -- | -- |
