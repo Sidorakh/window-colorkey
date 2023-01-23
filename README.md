@@ -4,11 +4,11 @@ C++ source is located in `./transparent-window` as a VS2019 project.
 
 ## Exposed functions:
 ### `window_set_transparency`
-| Parameter | Type | Description | Used with |
+| Parameter | Type | Description | Notes |
 | -- | -- |--| -- |
-| color | Constant.Color | Colour to make transparent | `WINDOW_TRANSPARENCY_MODE.COLOR_KEY` |
-| alpha | Real | Sets the alpha value of non-chroma keyed portions of the window | `WINDOW_TRANSPARENCY_MODE.ALPHA` |
-| mode | Real | Sets whether the `color` and/or `alpha` arguments are used | -- |
+| color | Constant.Color | Colour to make transparent | Used by `WINDOW_TRANSPARENCY_MODE.COLOR_KEY` |
+| alpha | Real | Sets the alpha value of non-chroma keyed portions of the window | Used by `WINDOW_TRANSPARENCY_MODE.ALPHA` |
+| mode | Real | Sets whether the `color` and/or `alpha` arguments are used | Both `WINDOW_TRANSPARENCY_MODE` values can be used to create a bitmask so that the `color` and `alpha` params are used together |
 
 Returns: none
 
