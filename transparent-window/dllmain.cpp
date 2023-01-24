@@ -1,16 +1,16 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
 #include "pch.h"
-#include "wingdi.h"
 #include "winuser.h"
 
 #define dllx extern "C" __declspec(dllexport)
 
-dllx double set_color_key(void* hwnd_ptr, double red, double green, double blue) {
+dllx double set_color_key(void* hwnd_ptr, double color, double alpha, double mode) {
 	HWND hwnd = (HWND)hwnd_ptr;
 	long flags = GetWindowLongPtr(hwnd, GWL_EXSTYLE);
 	flags |= WS_EX_LAYERED;
 	SetWindowLongPtr(hwnd, GWL_EXSTYLE, flags);
-	bool result = SetLayeredWindowAttributes(hwnd, RGB((int)red, (int)green, (int)blue), 255, LWA_COLORKEY);
+	//color in GDI uses BGR format, so just pass the color in directly from GML and bitmask off any possible alpha values
+	bool result = SetLayeredWindowAttributes(hwnd, (((int)color) & 0x00FFFFFF), (BYTE)alpha, (DWORD)mode);
 
 	//RECT rect;
 	//GetWindowRect(hwnd, &rect);

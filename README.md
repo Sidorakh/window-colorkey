@@ -1,14 +1,14 @@
 # window-colorkey
-Window transparency pakckaged in a DLL (Windows only)
+Window transparency packaged in a DLL (Windows only)
 C++ source is located in `./transparent-window` as a VS2019 project. 
 
 ## Exposed functions:
 ### `window_set_transparency`
-| Parameter | Type | Description |
-| -- | -- |--|
-| color | Constant.Color | Colour to make transparent |
-| alpha | Real | Alpha value to make transparent (unused?) |
-| mode | Enum | Transparency mode (enum: `WINDOW_TRANSPARENCY_MODE`) |
+| Parameter | Type | Description | Notes |
+| -- | -- |--| -- |
+| color | Constant.Color | Colour to make transparent | Used by `WINDOW_TRANSPARENCY_MODE.COLOR_KEY` |
+| alpha | Real | Sets the alpha value of non-chroma keyed portions of the window | Used by `WINDOW_TRANSPARENCY_MODE.ALPHA` |
+| mode | Real | Sets whether the `color` and/or `alpha` arguments are used | Both `WINDOW_TRANSPARENCY_MODE` values can be used to create a bitmask so that the `color` and `alpha` params are used together |
 
 Returns: none
 
